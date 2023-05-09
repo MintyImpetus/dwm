@@ -65,7 +65,7 @@ static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *killproc[]  = { "killproc", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
-static const char *pulsemixercmd[]  = { "alacritty","--command", "pulsemixer", NULL };
+static const char *pulsemixercmd[]  = { "st", "pulsemixer", NULL };
 static const char *browsercmd[]  = { "librewolf", NULL };
 static const char *shutdowncmd[]  = { "sudo halt", NULL };
 
