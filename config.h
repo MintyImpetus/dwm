@@ -67,7 +67,7 @@ static const char *killproc[]  = { "killproc", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
 static const char *pulsemixercmd[]  = { "st", "pulsemixer", NULL };
 static const char *browsercmd[]  = { "librewolf", NULL };
-static const char *shutdowncmd[]  = { "sudo halt", NULL };
+static const char *shutdowncmd[]  = { "sudo", "halt", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
