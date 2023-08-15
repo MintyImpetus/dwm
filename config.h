@@ -49,7 +49,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -69,6 +69,8 @@ static const char *pulsemixercmd[]  = { "st", "pulsemixer", NULL };
 static const char *browsercmd[]  = { "librewolf", NULL };
 static const char *shutdowncmd[]  = { "sudo", "halt", NULL };
 
+static const char *notioncmd[]  = { "notion", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_c,      spawn,          {.v = dmenucmd } },
@@ -77,6 +79,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l, spawn, 	           {.v = slockcmd } },
 	{ MODKEY,	                XK_v, spawn, 	           {.v = pulsemixercmd } },
 	{ MODKEY,	                XK_s, spawn, 	           {.v = browsercmd } },
+	{ MODKEY,	                XK_n, spawn, 	           {.v = notioncmd } },
 	{ MODKEY|ShiftMask,	        XK_s, spawn, 	           {.v = shutdowncmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
