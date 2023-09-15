@@ -63,7 +63,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *killproc[]  = { "killproc", NULL };
+static const char *startsurf[]  = { "surf-history", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
 static const char *pulsemixercmd[]  = { "st", "pulsemixer", NULL };
 static const char *browsercmd[]  = { "librewolf", NULL };
@@ -74,7 +74,7 @@ static const char *notioncmd[]  = { "notion", NULL };
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_c,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = killproc } },
+	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = startsurf } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l, spawn, 	           {.v = slockcmd } },
 	{ MODKEY,	                XK_v, spawn, 	           {.v = pulsemixercmd } },
