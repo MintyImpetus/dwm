@@ -63,23 +63,22 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *startsurf[]  = { "surf-history", NULL };
 static const char *slockcmd[]  = { "slock", NULL };
 static const char *pulsemixercmd[]  = { "st", "pulsemixer", NULL };
-static const char *browsercmd[]  = { "librewolf", NULL };
+static const char *browsercmd[]  = { "tabbed", "surf-history", "-e", NULL };
 static const char *shutdowncmd[]  = { "sudo", "halt", NULL };
-
+static const char *passmenucmd[]  = { "passmenu", NULL };
 static const char *notioncmd[]  = { "notion", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_c,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = startsurf } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_l, spawn, 	           {.v = slockcmd } },
 	{ MODKEY,	                XK_v, spawn, 	           {.v = pulsemixercmd } },
 	{ MODKEY,	                XK_s, spawn, 	           {.v = browsercmd } },
 	{ MODKEY,	                XK_n, spawn, 	           {.v = notioncmd } },
+	{ MODKEY,	                XK_p, spawn, 	           {.v = passmenucmd } },
 	{ MODKEY|ShiftMask,	        XK_s, spawn, 	           {.v = shutdowncmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
