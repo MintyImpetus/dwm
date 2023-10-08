@@ -1,0 +1,6 @@
+while true; do
+	BAT="$(cat /sys/class/power_supply/BAT0/capacity)"
+	[ -n "$BAT" ] && BAT="[$BAT%] "
+	xsetroot -name "$BAT[$(TZ="Your/Timezone" date +%T-%d/%m)]"
+	sleep 1
+done
